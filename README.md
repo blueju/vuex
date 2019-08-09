@@ -1,2 +1,1 @@
-# vuex
-vuex study
+# Vuex Study
