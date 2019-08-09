@@ -26,6 +26,8 @@ const actions = {
 }
 
 export default {
+    // 启用命名空间
+    namespaced: true,
     state,
     mutations,
     actions

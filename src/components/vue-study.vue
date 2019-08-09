@@ -26,11 +26,13 @@ export default {
   methods: {
     increment() {
       // 点击按钮后，我们需要自增加一，我们可以将这个自增加一理解成一个任务，现使用dispatch方法将任务派发给actions_increment
-      this.$store.dispatch("actions_increment");
+      // 启用命名空间后，需通过"模块名称/需要派发到的actions方法"进行派发
+      this.$store.dispatch("increment/actions_increment");
     },
     decrement() {
       // 点击按钮后，我们需要自减减一，我们可以将这个自减减一理解成一个任务，现使用dispatch方法将任务派发给actions_increment
-      this.$store.dispatch("actions_decrement");
+      // 启用命名空间后，需通过"模块名称/需要派发到的actions方法"进行派发
+      this.$store.dispatch("decrement/actions_decrement");
     }
   },
   mounted() {
