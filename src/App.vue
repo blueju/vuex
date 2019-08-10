@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png" />
-    <VueStudy />
+    <img src="./assets/logo.png">
+    <VueStudy/>
   </div>
 </template>
 
@@ -27,5 +27,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  width: 500px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>

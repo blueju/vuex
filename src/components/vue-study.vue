@@ -4,7 +4,14 @@
     <!-- <section>{{ this.$store.getters.get_good_test_data }}</section> -->
     <div class="increment">
       <button @click="increment">点击</button>
-      <h1>{{ this.$store.state.number }}</h1>
+      <fieldset>
+        <legend>使用this.$store.state.number获取number值</legend>
+        <h1>{{ this.$store.state.number }}</h1>
+      </fieldset>
+      <fieldset>
+        <legend>使用this.$store.getters_number获取number值</legend>
+        <h1>{{ this.$store.getters.getters_number }}</h1>
+      </fieldset>
     </div>
   </div>
 </template>
@@ -26,3 +33,10 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+fieldset {
+  margin: 20px 0;
+}
+</style>
+

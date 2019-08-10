@@ -8,6 +8,12 @@ const store = new Vuex.Store({
     state: {
         number: 0
     },
+    // getters，相当于Vuex的计算属性
+    getters: {
+        getters_number(state) {
+            return state.number
+        }
+    },
     // 改变 state 数据的方法，
     mutations: {
         /**
