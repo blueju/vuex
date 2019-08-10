@@ -3,6 +3,13 @@ const state = {
     number: 0
 }
 
+// getters，类似计算属性，缓存数据，提高效率，只有当所依赖的值发生改变时才重新计算
+const getters = {
+    getters_number(state) {
+        return state.number
+    }
+}
+
 // 改变 state 数据的方法
 const mutations = {
     /**
@@ -26,7 +33,9 @@ const actions = {
 }
 
 export default {
+    namespaced: true,
     state,
+    getters,
     mutations,
     actions
 }
