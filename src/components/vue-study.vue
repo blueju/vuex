@@ -5,11 +5,17 @@
     <p>{{ number3 }}</p>
     <p>{{ number4 }}</p>
     <p>{{ number5 }}</p>
+
+    <!-- <p>{{ one }}</p>
+    <p>{{ two }}</p>
+    <p>{{ three }}</p>
+    <p>{{ four }}</p>
+    <p>{{ five }}</p> -->
   </div>
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapGetters } from "vuex";
 
 export default {
   // 给组件命名（可选）
@@ -20,24 +26,22 @@ export default {
   },
   // 计算属性
   computed: {
-    number1() {
-      return this.$store.state.number1;
-    },
     // 简写、快速写法
-    ...mapState({
-      number2: state => state.number2,
-      number3: state => state.number3,
-      number4: state => state.number4,
-      number5: state => state.number5
-    })
-    // 完整写法
-    // ...mapState({
-    //   number4: function(state) {
-    //     return state.number4;
-    //   },
-    //   number5: function(state) {
-    //     return state.number5;
-    //   }
+    // ...mapGetters([
+    //   'number1',
+    //   'number2',
+    //   'number3',
+    //   'number4',
+    //   'number5',
+    // ])
+
+    // 如果你想将一个 getter 属性另取一个名字，使用对象形式：
+    // ...mapGetters({
+    //   one: "number1",
+    //   two: "number2",
+    //   three: "number3",
+    //   four: "number4",
+    //   five: "number5"
     // })
   }
 };

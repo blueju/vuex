@@ -11,6 +11,24 @@ const store = new Vuex.Store({
         number3: 3,
         number4: 4,
         number5: 5,
+    },
+    // getters
+    getters: {
+        number1(state) {
+            return state.number1
+        },
+        number2(state) {
+            return state.number2
+        },
+        number3(state) {
+            return state.number3
+        },
+        number4(state) {
+            return state.number4
+        },
+        number5(state) {
+            return state.number5
+        },
     }
 })
 
